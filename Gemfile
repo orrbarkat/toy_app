@@ -13,6 +13,7 @@ gem 'rails_12factor'
 gem 'pg'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
