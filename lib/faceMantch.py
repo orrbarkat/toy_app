@@ -13,6 +13,9 @@ def frinedToPhoto(friends):
 def extractImg(me) :
     ## useing the api to get profile picture from a friend type
     s
+def extractImg(friends):
+    ## useing the api to get profile picture from a friend type.
+    s
 def bestMatch( myPhoto , PhotoLst ):
     ## find the best match
     s
@@ -28,7 +31,6 @@ def main():
     graph = facebook.GraphAPI(oauth_access_token)
     profile = graph.get_object("me")
     friends = graph.get_connections("me", "friends")
-    
     graph = facebook.GraphAPI(access_token='your_token', version='2.2') ## the access token 
     friends = graph.get_connections(id='me', connection_name='friends') ## all the firends
     find 

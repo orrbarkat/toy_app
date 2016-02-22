@@ -1,5 +1,8 @@
 import facebook
-import GraphAPI
+<<<<<<< HEAD
+import urllib
+=======
+>>>>>>> a36af06fd8d30a48f1c3df5be2abe545e1a760c1
 
 ######################################################
 
@@ -10,49 +13,38 @@ def frinedToPhoto(friends):
         photoLst.append(extractImg(friends))
     return PhotoLst
 
+<<<<<<< HEAD
 def extractImg(me) :
+    ## useing the api to get profile picture from a friend type
+=======
+def extractImg(friends):
     ## useing the api to get profile picture from a friend type.
-    	from requests import request, HTTPError
-
-	from django.core.files.base import ContentFile
-
-
-	def save_profile_picture(strategy, user, response, details,
-		                 is_new=False,*args,**kwargs):
-
-	    if is_new and strategy.backend.name == 'facebook':
-		url = 'http://graph.facebook.com/{0}/picture'.format(response['id'])
-
-		try:
-		    response = request('GET', url, params={'type': 'large'})
-		    response.raise_for_status()
-		except HTTPError:
-		    pass
-		else:
-		    profile = user.get_profile()
-		    profile.profile_photo.save('{0}_social.jpg'.format(user.username),
-		                           ContentFile(response.content))
-		    profile.save()	
-
-
+>>>>>>> a36af06fd8d30a48f1c3df5be2abe545e1a760c1
+    s
 def bestMatch( myPhoto , PhotoLst ):
     ## find the best match
-
+    s
 def makePage(myPhoto , result ):
     ##  make the final page that will be shown on success.
-
+    s
 def post(page):
     ## post the final page on the users wall.
-    
+    s
 #################################################### ## 
 
-def main:
+def main():
+<<<<<<< HEAD
+    graph = facebook.GraphAPI(oauth_access_token)
+    profile = graph.get_object("me")
+    friends = graph.get_connections("me", "friends")
+    
+=======
+>>>>>>> a36af06fd8d30a48f1c3df5be2abe545e1a760c1
     graph = facebook.GraphAPI(access_token='your_token', version='2.2') ## the access token 
     friends = graph.get_connections(id='me', connection_name='friends') ## all the firends
     find 
     myPhoto = 0# the main user profile pic.
     PhotoLst = frinedToPhoto(friends)
-
     result = bestMatch( myPhoto , PhotoLst )
     page = makePage(myPhoto , result )
     post(page)     
